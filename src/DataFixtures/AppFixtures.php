@@ -15,21 +15,19 @@ class AppFixtures extends Fixture
         // $manager->persist($product);
 
         $categorie1 = new Categorie();
-
         $categorie1->setNom("Alimentaire");
-
         $manager->persist($categorie1);
 
         $sousCategorie1 = new SousCategorie();
-
         $sousCategorie1->setNom("Frais");
-
         $manager->persist($sousCategorie1);
 
         $sousCategorie2 = new SousCategorie();
-
         $sousCategorie2->setNom("Surgelé");
+        $manager->persist($sousCategorie2);
 
+        $sousCategorie2 = new SousCategorie();
+        $sousCategorie2->setNom("Surgelé");
         $manager->persist($sousCategorie2);
 
         // Pour associer vos entités

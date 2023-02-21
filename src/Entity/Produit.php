@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProduitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -29,6 +31,14 @@ class Produit
     #[ORM\ManyToOne(inversedBy: 'produit')]
     #[ORM\JoinColumn(nullable: false)]
     private ?SousCategorie $sousCategorie = null;
+
+    #[ORM\OneToMany(mappedBy: 'produit', targetEntity: Contient::class, orphanRemoval: true)]
+    private Collection $contient;
+
+    public function __construct()
+    {
+        $this->contient = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -91,6 +101,36 @@ class Produit
     public function setSousCategorie(?SousCategorie $sousCategorie): self
     {
         $this->sousCategorie = $sousCategorie;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Contient>
+     */
+    public function getContient(): Collection
+    {
+        return $this->contient;
+    }
+
+    public function addContient(Contient $contient): self
+    {
+        if (!$this->contient->contains($contient)) {
+            $this->contient->add($contient);
+            $contient->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeContient(Contient $contient): self
+    {
+        if ($this->contient->removeElement($contient)) {
+            // set the owning side to null (unless already changed)
+            if ($contient->getProduit() === $this) {
+                $contient->setProduit(null);
+            }
+        }
 
         return $this;
     }

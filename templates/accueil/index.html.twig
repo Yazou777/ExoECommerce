@@ -6,7 +6,7 @@
 
 <h1> Catégories </h1>
       {% for categorie in categories %}
-      <a href="#">
+      <a href="{{ path('app_guitares_basses') }}">
       <div>
             {{ categorie.nom }}
       </div>
@@ -15,5 +15,5 @@
       </div>
       </a>
         {% endfor %}
-</div>
+
 {% endblock %}

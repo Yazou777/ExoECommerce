@@ -29,6 +29,7 @@ class AppFixtures extends Fixture
 
         $sousCategorie1 = new SousCategorie();
         $sousCategorie1->setNom("Guitares Electriques");
+        $sousCategorie1->setImage("GuitaresElectriques.webp");
         $manager->persist($sousCategorie1);
         $categorie1->addSousCategorie($sousCategorie1);
 
@@ -42,6 +43,7 @@ class AppFixtures extends Fixture
 
         $sousCategorie2 = new SousCategorie();
         $sousCategorie2->setNom("Guitares Classiques");
+        $sousCategorie2->setImage("GuitaresClassiques.webp");
         $manager->persist($sousCategorie2);
         $categorie1->addSousCategorie($sousCategorie2);
 
@@ -49,9 +51,24 @@ class AppFixtures extends Fixture
 
 
         $sousCategorie3 = new SousCategorie();
-        $sousCategorie3->setNom("Basse Electriques");
+        $sousCategorie3->setNom("Basses Electriques");
+        $sousCategorie3->setImage("BassesElectriques.webp");
         $manager->persist($sousCategorie3);
         $categorie1->addSousCategorie($sousCategorie3);
+
+
+
+
+        $categorie2 = new Categorie();
+        $categorie2->setNom("Batteries & Percussions");
+        $categorie2->setImage("BatteriesPercussions.webp");
+        $manager->persist($categorie2);
+
+        $sousCategorie2 = new SousCategorie();
+        $sousCategorie2->setNom("Batteries Acoustiques");
+        $sousCategorie2->setImage("BatteriesAcoustiques.webp");
+        $manager->persist($sousCategorie2);
+        $categorie2->addSousCategorie($sousCategorie2);
 
 
 

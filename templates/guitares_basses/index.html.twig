@@ -3,21 +3,21 @@
 {% block title %}Hello GuitaresBassesController!{% endblock %}
 
 {% block body %}
-<div class="container">
-<div class="row">
+
+
 <h1> SousCatégories </h1>
+
       {% for sousCategorie in sousCategories %}
-      <div class="col-4">
+
+      <div class="col-12 col-sm-4" >
       <a href="">
       <div>
             {{ sousCategorie.nom }}
-      </div>
-       <div>
            <img src="/images/{{ sousCategorie.image }}"> 
       </div>
       </a>
       </div>
         {% endfor %}
-        </div>
-</div>
+       
+
 {% endblock %}

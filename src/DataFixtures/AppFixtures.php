@@ -34,27 +34,100 @@ class AppFixtures extends Fixture
         $categorie1->addSousCategorie($sousCategorie1);
 
         $produit1 = new Produit();
+        $produit1->setNom("Harley Benton TE-52 NA Vintage Series");
+        $produit1->setImage("HarleyTE-52.webp");
+        $manager->persist($produit1);
+        $sousCategorie1->addProduit($produit1);
+
+        $produit1 = new Produit();
         $produit1->setNom("Larry Carlton S7FM TBL 2nd Gen");
+        $produit1->setImage("Larry.webp");
+        $manager->persist($produit1);
+        $sousCategorie1->addProduit($produit1);
+
+        $produit1 = new Produit();
+        $produit1->setNom("Squier Jazzmaster 40th Anniv LPB");
+        $produit1->setImage("Squier.webp");
+        $manager->persist($produit1);
+        $sousCategorie1->addProduit($produit1);
+
+        $produit1 = new Produit();
+        $produit1->setNom("Harley Benton TE-20HH SBK Standard Series");
+        $produit1->setImage("HarleyTE-20.webp");
+        $manager->persist($produit1);
+        $sousCategorie1->addProduit($produit1);
+
+        $produit1 = new Produit();
+        $produit1->setNom("Gibson Les Paul Standard 60s BB");
+        $produit1->setImage("Gibson.webp");
         $manager->persist($produit1);
         $sousCategorie1->addProduit($produit1);
 
 
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Guitares Classiques");
+        $sousCategorie1->setImage("GuitaresClassiques.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
 
 
-        $sousCategorie2 = new SousCategorie();
-        $sousCategorie2->setNom("Guitares Classiques");
-        $sousCategorie2->setImage("GuitaresClassiques.webp");
-        $manager->persist($sousCategorie2);
-        $categorie1->addSousCategorie($sousCategorie2);
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Basses Electriques");
+        $sousCategorie1->setImage("BassesElectriques.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
+
+
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Guitares Acoustiques & Electro-Acoustiques");
+        $sousCategorie1->setImage("GuitaresAE.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
+
+
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Basses Acoustiques / Semi-Acoustiques");
+        $sousCategorie1->setImage("BassesASA.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
+
+
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Ukulélés");
+        $sousCategorie1->setImage("Ukuleles.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
+
+
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Instruments Bluegrass");
+        $sousCategorie1->setImage("InstrumentsBluegrass.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
+
+
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Guitares de Voyage");
+        $sousCategorie1->setImage("GuitaresDeVoyage.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
+
+
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Autres Instruments à Cordes Pincées");
+        $sousCategorie1->setImage("AutresInstruments.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
+
+
+        $sousCategorie1 = new SousCategorie();
+        $sousCategorie1->setNom("Amplificateurs Guitares Electriques");
+        $sousCategorie1->setImage("Amplificateurs.webp");
+        $manager->persist($sousCategorie1);
+        $categorie1->addSousCategorie($sousCategorie1);
 
 
 
-
-        $sousCategorie3 = new SousCategorie();
-        $sousCategorie3->setNom("Basses Electriques");
-        $sousCategorie3->setImage("BassesElectriques.webp");
-        $manager->persist($sousCategorie3);
-        $categorie1->addSousCategorie($sousCategorie3);
 
 
 
@@ -70,6 +143,28 @@ class AppFixtures extends Fixture
         $manager->persist($sousCategorie2);
         $categorie2->addSousCategorie($sousCategorie2);
 
+
+
+
+        $categorie3 = new Categorie();
+        $categorie3->setNom("Pianos & Claviers");
+        $categorie3->setImage("Piano.webp");
+        $manager->persist($categorie3);
+
+        $categorie4 = new Categorie();
+        $categorie4->setNom("Studio & Enregistrement");
+        $categorie4->setImage("Studio.webp");
+        $manager->persist($categorie4);
+
+        $categorie5 = new Categorie();
+        $categorie5->setNom("Logiciels Musicaux");
+        $categorie5->setImage("Logiciels.webp");
+        $manager->persist($categorie5);
+
+        $categorie6 = new Categorie();
+        $categorie6->setNom("Sonorisation");
+        $categorie6->setImage("Sonorisation.webp");
+        $manager->persist($categorie6);
 
 
         

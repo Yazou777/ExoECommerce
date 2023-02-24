@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GuitaresElectriquesController!{% endblock %}
+
+{% block body %}
+
+
+<h1> GuitaresElectriques </h1>
+<div class="container">
+<div class="row">
+      {% for produit in produits %}
+
+      <div class="col-12 m-3 text-center">
+
+        <a href="#">
+
+      <img class="" src="/images/{{ produit.image }}">
+      {{ produit.nom }}
+
+      </img>
+      </a>
+
+      </div>
+      {% endfor %}
+      </div>
+      </div>
+
+{% endblock %}

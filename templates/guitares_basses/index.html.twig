@@ -6,18 +6,23 @@
 
 
 <h1> SousCatégories </h1>
-
+<div class="container">
+<div class="row">
       {% for sousCategorie in sousCategories %}
 
-      <div class="col-12 col-sm-4" >
-      <a href="">
-      <div>
-            {{ sousCategorie.nom }}
-           <img src="/images/{{ sousCategorie.image }}"> 
-      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 m-3 text-center">
+
+        <a href="/guitares_electriques/{{ sousCategorie.id}}">
+
+      <img class="" src="/images/{{ sousCategorie.image }}">
+      {{ sousCategorie.nom }}
+
+      </img>
       </a>
+
       </div>
-        {% endfor %}
-       
+      {% endfor %}
+      </div>
+      </div>
 
 {% endblock %}

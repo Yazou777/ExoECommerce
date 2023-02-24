@@ -5,15 +5,24 @@
 {% block body %}
 
 <h1> Catégories </h1>
+<div class="container">
+<div class="row">
       {% for categorie in categories %}
+      <div class="col-12 col-sm-6 col-md-5 col-lg-4 text-center" >
+
       <a href="/guitares_basses/{{ categorie.id }}">
       <div>
-            {{ categorie.nom }}
+      <img src="/images/{{ categorie.image }}"> 
       </div>
-       <div>
-           <img src="/images/{{ categorie.image }}"> 
-      </div>
+      <div>
+        {{ categorie.nom }}
+        </div>
+        </img>
       </a>
-        {% endfor %}
+
+      </div>
+      {% endfor %}
+      </div>
+      </div>
 
 {% endblock %}

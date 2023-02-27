@@ -22,8 +22,7 @@ class Produit
     #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2, nullable: true)]
     private ?string $prix = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $description = null;
+   
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
@@ -34,6 +33,9 @@ class Produit
 
     #[ORM\OneToMany(mappedBy: 'produit', targetEntity: Contient::class, orphanRemoval: true)]
     private Collection $contient;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $description = null;
 
     public function __construct()
     {
@@ -69,17 +71,6 @@ class Produit
         return $this;
     }
 
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(?string $description): self
-    {
-        $this->description = $description;
-
-        return $this;
-    }
 
     public function getImage(): ?string
     {
@@ -131,6 +122,18 @@ class Produit
                 $contient->setProduit(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

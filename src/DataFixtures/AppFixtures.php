@@ -30,36 +30,49 @@ class AppFixtures extends Fixture
         $sousCategorie1 = new SousCategorie();
         $sousCategorie1->setNom("Guitares Electriques");
         $sousCategorie1->setImage("GuitaresElectriques.webp");
+
         $manager->persist($sousCategorie1);
         $categorie1->addSousCategorie($sousCategorie1);
 
         $produit1 = new Produit();
         $produit1->setNom("Harley Benton TE-52 NA Vintage Series");
         $produit1->setImage("HarleyTE-52.webp");
+        $produit1->setPrix(158);
+        $produit1->setDescription("
+        <ul class='ps-3'>
+        <li >Série Vintage</li>
+        <li >Corps en frêne américain</li>
+        <li >Manche Vintage visé en érable canadien caramélisé avec bande en Roseacer</li>
+      </ul>
+      ");
         $manager->persist($produit1);
         $sousCategorie1->addProduit($produit1);
 
         $produit1 = new Produit();
         $produit1->setNom("Larry Carlton S7FM TBL 2nd Gen");
         $produit1->setImage("Larry.webp");
+        $produit1->setPrix(589);
         $manager->persist($produit1);
         $sousCategorie1->addProduit($produit1);
 
         $produit1 = new Produit();
         $produit1->setNom("Squier Jazzmaster 40th Anniv LPB");
         $produit1->setImage("Squier.webp");
+        $produit1->setPrix(344);
         $manager->persist($produit1);
         $sousCategorie1->addProduit($produit1);
 
         $produit1 = new Produit();
         $produit1->setNom("Harley Benton TE-20HH SBK Standard Series");
         $produit1->setImage("HarleyTE-20.webp");
+        $produit1->setPrix(88);
         $manager->persist($produit1);
         $sousCategorie1->addProduit($produit1);
 
         $produit1 = new Produit();
         $produit1->setNom("Gibson Les Paul Standard 60s BB");
         $produit1->setImage("Gibson.webp");
+        $produit1->setPrix(2290);
         $manager->persist($produit1);
         $sousCategorie1->addProduit($produit1);
 

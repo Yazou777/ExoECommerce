@@ -5,12 +5,43 @@
 {% block body %}
 
 
-<h1> GuitaresElectriques </h1>
-<div class="container">
-<div class="row">
+<h1 class="text-center"> GuitaresElectriques </h1>
+
+
       {% for produit in produits %}
 
-      <div class="col-12 m-3 text-center">
+<div class="card mb-3" style="max-width: 1080px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/images/{{ produit.image }}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+   
+      <div class="card-body">
+
+       <div class="container">
+    <div class="row">
+        <h5 class="card-title  col-10">{{ produit.nom }} </h5>
+        <div class="col-2">{{produit.prix}}€ </div>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div class="card-text">
+        {# {{produit.description}} #}
+        <ul class="ps-3 ">
+  <li >Série Vintage</li>
+  <li >Corps en frêne américain</li>
+  <li >Manche Vintage visé en érable canadien caramélisé avec bande en Roseacer</li>
+</ul>
+</div>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      {# <div class="col-12 m-3 text-center ">
 
         <a href="#">
 
@@ -18,11 +49,11 @@
       {{ produit.nom }}
 
       </img>
-      </a>
+      </a> #}
 
       </div>
       {% endfor %}
       </div>
-      </div>
+      
 
 {% endblock %}

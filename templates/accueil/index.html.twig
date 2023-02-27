@@ -89,7 +89,8 @@
 <div class="container">
 <div class="row ">
       {% for categorie in categories %}
-      <div class="col-12 col-sm-6 col-md-5 col-lg-4 text-center  border-bottom" >
+  
+      <div class="col-12 col-sm-6 col-md-5 col-lg-4 text-center  border-bottom d-flex " >
 
       <a href="/guitares_basses/{{ categorie.id }}">
      
@@ -101,6 +102,7 @@
       </a>
 
       </div>
+
       {% endfor %}
       </div>
       </div>

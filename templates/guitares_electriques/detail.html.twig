@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello detailController!{% endblock %}
+
+{% block body %}
+<style>
+            .v {
+               width:500px;
+                height: 500px;
+            }
+        </style>
+<div class="container">
+<div class="row">
+
+      {% for produit in produits %}
+<div class="col-8">
+<div class="container">
+<div class="row">
+<div class="fs-1">
+{{ produit.nom }}
+</div> 
+
+<img src="/images/{{ produit.image }} " class="v mx-auto "> 
+
+</div>
+</div>
+</div>
+
+<div class="col-4">
+
+<div class="fs-1">
+{{ produit.prix}}
+</div> 
+
+</div>
+ {% endfor %}
+
+
+
+ </div>
+</div>
+{% endblock %}

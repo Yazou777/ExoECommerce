@@ -24,6 +24,21 @@ a {
     background-color: rgb(128, 126, 126);
 }
 
+.bgGB{
+    background: linear-gradient(
+      to right,
+      rgb(0, 0, 0) 0%,
+      rgb(0, 0, 0) 50%,
+      rgb(255, 81, 0) 50%,
+      rgb(255, 81, 0)  100%
+    );
+  }
+
+.card {
+    border: none;
+}
+
+
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
         display: none;

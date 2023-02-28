@@ -3,10 +3,28 @@
 {% block title %}Hello GuitaresBassesController!{% endblock %}
 
 {% block body %}
-
-
-<h1> SousCatégories </h1>
+<div class="bgGB">
 <div class="container">
+<div class="row">
+<div class="card p-0 text-white">
+<img src="{{asset('images/GuitareBasseBandeau.jpg')}}" class"card-img">
+<div class="card-img-overlay">
+ <h1 class="card-title ">Guitares & Basses</h1>
+    {# <p class="card-text">
+      This is a wider card with supporting text below as a natural lead-in to additional
+      content. This content is a little bit longer.
+    </p>
+    <p class="card-text">Last updated 3 mins ago</p> #}
+  </div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div class="container">
+
 <div class="row">
       {% for sousCategorie in sousCategories %}
 

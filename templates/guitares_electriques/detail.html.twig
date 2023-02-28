@@ -4,10 +4,12 @@
 
 {% block body %}
 <style>
-            .v {
-               width:500px;
-                height: 500px;
-            }
+         .miniature{
+            height:50px;
+         }   
+         .exempleSonore{
+            height:100px;
+         }
         </style>
 <div class="container">
 <div class="row">
@@ -20,17 +22,20 @@
 {{ produit.nom }}
 </div> 
 
-<img src="/images/{{ produit.image }} " class="v mx-auto "> 
-
+<img src="/images/{{ produit.image }} " class="imgdetail mx-auto "> 
+<div class="bg-light mb-2 miniature">Miniature</div>
+<div class="bg-light exempleSonore">Exemple sonore</div>
 </div>
 </div>
 </div>
 
-<div class="col-4">
+<div class="col-4 bg-light ">
 
-<div class="fs-1">
-{{ produit.prix}}
+<div class="fs-1 sticky-sm-top">
+{{ produit.prix}}€
 </div> 
+
+
 
 </div>
  {% endfor %}

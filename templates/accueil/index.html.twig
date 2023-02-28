@@ -4,10 +4,10 @@
 
 {% block body %}
 
-<h1 class="text-center"> Nos Catégories </h1>
 
 
-<div class="container-fluid text-center my-3">
+
+<div class="container-fluid text-center my-5">
     <div class="row mx-auto my-auto justify-content-center">
         <div id="recipeCarousel" class="carousel slide" {# data-bs-ride="carousel" <= cette classe sert a activer un défilement auto du carousel #}> 
             <div class="carousel-inner" role="listbox">
@@ -84,13 +84,13 @@
     </div>
 </div>
 
-
+<h1 class="text-center my-5"> Nos Catégories </h1>
 
 <div class="container">
 <div class="row ">
       {% for categorie in categories %}
   
-      <div class="col-12 col-sm-6 col-md-5 col-lg-4 text-center  border-bottom d-flex " >
+      <div class="col-12 col-sm-6 col-md-5 col-lg-4 text-center  border-bottom d-flex" >
 
       <a href="/guitares_basses/{{ categorie.id }}">
      

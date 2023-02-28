@@ -38,6 +38,10 @@ a {
     border: none;
 }
 
+.imgdetail {
+    width:500px;
+    height: 500px;
+}
 
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {

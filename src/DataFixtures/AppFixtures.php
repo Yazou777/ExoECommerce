@@ -139,7 +139,12 @@ class AppFixtures extends Fixture
         $manager->persist($sousCategorie1);
         $categorie1->addSousCategorie($sousCategorie1);
 
-
+        $produit1 = new Produit();
+        $produit1->setNom("Boss Katana 50 MKII");
+        $produit1->setImage("BossKatana.webp");
+        $produit1->setPrix(279);
+        $manager->persist($produit1);
+        $sousCategorie1->addProduit($produit1);
 
 
 

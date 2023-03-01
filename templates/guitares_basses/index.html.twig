@@ -9,6 +9,7 @@
 <div class="card p-0 text-white">
 <img src="{{asset('images/GuitareBasseBandeau.jpg')}}" class"card-img">
 <div class="card-img-overlay">
+ <a type="button" class="btn btn-dark" href="/">Accueil</a>
  <h1 class="card-title ">Guitares & Basses</h1>
     {# <p class="card-text">
       This is a wider card with supporting text below as a natural lead-in to additional
@@ -26,6 +27,7 @@
 <div class="container">
 
 <div class="row">
+
       {% for sousCategorie in sousCategories %}
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-2 m-3 text-center">
@@ -40,7 +42,10 @@
 
       </div>
       {% endfor %}
+     
       </div>
       </div>
+
+
 
 {% endblock %}

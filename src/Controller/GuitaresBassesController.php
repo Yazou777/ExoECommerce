@@ -13,6 +13,7 @@ class GuitaresBassesController extends AbstractController
     #[Route('/guitares_basses/{id}', name: 'app_guitares_basses')]
     public function index(SousCategorieRepository $sousCategorieRepository, $id): Response
     {
+
         $sousCategories = $sousCategorieRepository->findBy([
             "categorie" => $id
         ]);

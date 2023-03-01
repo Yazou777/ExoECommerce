@@ -2,10 +2,11 @@
 
 namespace App\Controller;
 
+use App\Repository\ProduitRepository;
 use App\Repository\CategorieRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AccueilController extends AbstractController
 {
@@ -16,4 +17,13 @@ class AccueilController extends AbstractController
             'categories' => $categorieRepository->findAll()
         ]);
     }
+
+    #[Route('/all_produit', name: 'app_all_produit')]
+    public function allProduit(ProduitRepository $produitRepository): Response
+    {
+        return $this->render('accueil/all_produit.html.twig', [
+            'produits' => $produitRepository->findAll()
+        ]);
+    }
 }
+

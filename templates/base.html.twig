@@ -8,127 +8,121 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-       
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
         {# <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/_variables.scss') }}"> #}
-            <style>
-         .footer1{
+    <style>
+        .footer1{
             height:300px;
-         }   
-         .footer2{
+        }   
+        .footer2{
             height:200px;
-         }
-         .contenu{
-          height:800px;
-         }
-        </style>
+        }
+        .contenu{
+            height:800px;
+        }
+    </style>
         {% endblock %}
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
-<div class="bgHead">
- <div class="container ">
- <div class="row ">
+        <body>
+            <div class="bgHead">
+                <div class="container ">
+                    <div class="bgHeah row text-center "> 
+                        <a class="test col-1 text-center m-auto text-decoration-none text-dark" href="#">Service</a>
+                        <a class="col-1 text-center m-auto text-decoration-none text-dark" href="#">Nous contacter</a>
+                        <a class="col-1 text-center m-auto text-decoration-none text-dark" href="#">A propos</a>
+                        <a class="col-5 text-center m-auto text-decoration-none text-dark" href="{{ path('app_accueil') }}"><h1>thomann</h1></a>
+                        <a class="col-2 text-center m-auto text-decoration-none text-dark" href="#">Service de réparation</a>
+                        <a class="col-2 text-center m-auto text-decoration-none text-dark" href="#">Gatrantie satisfait ou remboursé</a>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-dark bgHead">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarColor01">
+                                <ul class="navbar-nav me-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Home
+                                            <span class="visually-hidden">(current)</span>
+                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Pricing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="#">Separated link</a>
+                                                    </div>
+                                    </li>
+                                </ul>
+                                <form class="d-flex">
+                                    <input class="form-control me-sm-2" type="search" placeholder="Search">
+                                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                                </form>
+                            </div>
+                      </div>
+                  </nav>
+              </div>
 
-<div class="bgHeah row text-center "> 
-<a class="test col-1 text-center m-auto text-decoration-none text-dark" href="#">Service</a>
-<a class="col-1 text-center m-auto text-decoration-none text-dark" href="#">Nous contacter</a>
-<a class="col-1 text-center m-auto text-decoration-none text-dark" href="#">A propos</a>
-<a class="col-5 text-center m-auto text-decoration-none text-dark" href="{{ path('app_accueil') }}"><h1>thomann</h1></a>
-<a class="col-2 text-center m-auto text-decoration-none text-dark" href="#">Service de réparation</a>
-<a class="col-2 text-center m-auto text-decoration-none text-dark" href="#">Gatrantie satisfait ou remboursé</a>
-</div>
-</div>
- <nav class="navbar navbar-expand-lg navbar-dark bgHead">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
- </div>
-        </div>
-
-        <div class="bg-dark text-center">
-        <a class="text-white" href="/guitares_basses/1">lien</a>
-<button type="button" class="btn btn-dark" href="/guitares_basses/{id}">Guit/Bass</button>
-<button type="button" class="btn btn-dark">Batteries</button>
-<button type="button" class="btn btn-dark">Clavier</button>
-<button type="button" class="btn btn-dark">Studio</button>
-<button type="button" class="btn btn-dark">Logiciels</button>
-<button type="button" class="btn btn-dark">Sono</button>
-<button type="button" class="btn btn-dark">Eclairage</button>
-<button type="button" class="btn btn-dark">DJ</button>
-<button type="button" class="btn btn-dark">Vidéo</button>
-<button type="button" class="btn btn-dark">Micros</button>
-<button type="button" class="btn btn-dark">Effets</button>
-<button type="button" class="btn btn-dark">Vents</button>
-<button type="button" class="btn btn-dark">Instr.Trad</button>
-<button type="button" class="btn btn-dark">Librairie</button>
-<button type="button" class="btn btn-dark">Cases</button>
-<button type="button" class="btn btn-dark">Câbles</button>
-<button type="button" class="btn btn-dark">Accessoires</button>
-</div>
-       
+              <div class="bg-dark text-center">
+                  <a type="button" class="btn btn-dark" href="/guitares_basses/1">Guit/Bass</a>
+                  <button type="button" class="btn btn-dark">Batteries</button>
+                  <button type="button" class="btn btn-dark">Clavier</button>
+                  <button type="button" class="btn btn-dark">Studio</button>
+                  <button type="button" class="btn btn-dark">Logiciels</button>
+                  <button type="button" class="btn btn-dark">Sono</button>
+                  <button type="button" class="btn btn-dark">Eclairage</button>
+                  <button type="button" class="btn btn-dark">DJ</button>
+                  <button type="button" class="btn btn-dark">Vidéo</button>
+                  <button type="button" class="btn btn-dark">Micros</button>
+                  <button type="button" class="btn btn-dark">Effets</button>
+                  <button type="button" class="btn btn-dark">Vents</button>
+                  <button type="button" class="btn btn-dark">Instr.Trad</button>
+                  <button type="button" class="btn btn-dark">Librairie</button>
+                  <button type="button" class="btn btn-dark">Cases</button>
+                  <button type="button" class="btn btn-dark">Câbles</button>
+                  <button type="button" class="btn btn-dark">Accessoires</button>
+              </div>
         {% block body %}{% endblock %}
-
-   <div class="container-fuid">
-   <div class="row">    
-
-<div class="contenu mt-5  fs-1">
-</div>
-
-<div class="bg-light footer1 mt-5  fs-1 text-center">
-Achetez et payez en toute sécurité
-</div>
-
-<div class="bg-dark footer2 text-white text-center fs-1">
-Infos légales et Twitter etc...
-</div>
-
-</div>
-</div>
-
     </body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
- <script src="{{ asset('js/script.js') }}"></script>
+
+    <footer>
+        <div class="container-fuid">
+            <div class="row">    
+                <div class="contenu mt-5  fs-1">
+                </div>
+
+                <div class="bg-light footer1 mt-5  fs-1 text-center">
+                Achetez et payez en toute sécurité
+                </div>
+
+                <div class="bg-dark footer2 text-white text-center fs-1">
+                Infos légales et Twitter etc...
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </html>

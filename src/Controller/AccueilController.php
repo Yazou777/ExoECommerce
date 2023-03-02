@@ -16,7 +16,7 @@ class AccueilController extends AbstractController
         $categories = $categorieRepository->findAll();
         return $this->render('accueil/index.html.twig', [
             'categories' => $categories,
-            "chemin_de_fer" =>[[ "name" => "Categories", "link" => "/"]]
+            
         ]);
     }
 

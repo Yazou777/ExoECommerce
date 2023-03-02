@@ -8,16 +8,16 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class GuitaresBassesController extends AbstractController
+class SousCategorieController extends AbstractController
 {
-    #[Route('/guitares_basses/{id}', name: 'app_guitares_basses')]
+    #[Route('/sous_categorie/{id}', name: 'app_guitares_basses')]
     public function index(SousCategorieRepository $sousCategorieRepository, $id): Response
     {
         
         $sousCategories = $sousCategorieRepository->findBy([
             "categorie" => $id
         ]);
-        return $this->render('guitares_basses/index.html.twig', [
+        return $this->render('sous_categorie/index.html.twig', [
             'sousCategories' => $sousCategories,
            'id' => $id
            

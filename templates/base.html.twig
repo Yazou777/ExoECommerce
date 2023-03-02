@@ -103,6 +103,25 @@
                   <button type="button" class="btn btn-dark">Câbles</button>
                   <button type="button" class="btn btn-dark">Accessoires</button>
               </div>
+
+                  <div>
+                        {% if chemin_de_fer is defined %} 
+                                <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                                <li class="breadcrumb-item">
+                                                        <a href="/">Accueil</a>
+                                                </li>
+
+                                                {% for item in chemin_de_fer %}
+                                                        <li class"breadcrumb-item">
+                                                                <a href="{{item.link}}">{{ item.name }}</a>
+                                                        </li>
+                                                {% endfor %}
+                                        </ol>
+                                </nav>
+                        {% endif %}
+                </div>
+
         {% block body %}{% endblock %}
     </body>
 

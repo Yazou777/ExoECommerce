@@ -13,8 +13,10 @@ class AccueilController extends AbstractController
     #[Route('/', name: 'app_accueil')]
     public function index(CategorieRepository $categorieRepository): Response
     {
+        $categories = $categorieRepository->findAll();
         return $this->render('accueil/index.html.twig', [
-            'categories' => $categorieRepository->findAll()
+            'categories' => $categories,
+            "chemin_de_fer" =>[[ "name" => "Categories", "link" => "/"]]
         ]);
     }
 

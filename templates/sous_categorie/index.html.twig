@@ -9,7 +9,8 @@
             <div class="card p-0 text-white">
                 <img src="{{asset('images/GuitareBasseBandeau.jpg')}}" class"card-img">
                     <div class="card-img-overlay">
-                        <a type="button" class="btn btn-dark" href="/">Accueil</a>
+                        {# <a type="button" class="btn btn-dark" href="/">Accueil</a> #}
+               
       
                        {% if id == 1 %}     
                             <h1 class="card-title ">Guitares & Basses</h1>
@@ -45,7 +46,7 @@
     <div class="row">
 {% for sousCategorie in sousCategories %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 m-3 text-center">
-            <a href="/guitares_electriques/{{ sousCategorie.id}}">
+            <a href="/produit/{{ sousCategorie.id}}">
                 <img class="" src="/images/{{ sousCategorie.image }}">
                     {{ sousCategorie.nom }}
                 </img>

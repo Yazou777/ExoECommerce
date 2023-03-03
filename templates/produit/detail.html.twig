@@ -3,7 +3,7 @@
 {% block title %}Hello detailController!{% endblock %}
 
 {% block body %}
-<style>
+/* <style>
          .miniature{
             height:50px;
          }   
@@ -17,25 +17,25 @@
 <div class="container">
 <div class="row">
 
-      {% for produit in produits %}
+
 <div class="col-8">
 <div class="container">
 <div class="row">
 <div class="fs-1">
-{{ produit.nom }}
+{{ Produit.nom }}
 </div> 
 
-<img src="/images/{{ produit.image }} " class="imgdetail mx-auto "> 
-<div class="bg-light mb-2 miniature">Miniature</div>
-<div class="bg-light exempleSonore">Exemple sonore</div>
+<img src="/images/{{ Produit.image }} " class="imgdetail mx-auto "> 
+<div class="bg-secondary mb-2 miniature">Miniature</div>
+<div class="bg-secondary exempleSonore">Exemple sonore</div>
 </div>
 </div>
 </div>
 
-<div class="col-4 bg-light forSticky">
+<div class="col-4 bg-secondary forSticky">
 
 <div class="fs-1 sticky-sm-top">
-{{ produit.prix}}€
+{{ Produit.prix}}€
 
 
 </div> 
@@ -43,10 +43,10 @@
 
 
 </div>
- {% endfor %}
+
 
 
 
  </div>
-</div>
+</div> */
 {% endblock %}

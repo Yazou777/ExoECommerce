@@ -6,11 +6,13 @@
 
 <div class="container">
     <div class="row">
-{% for sousCategorie in sousCategories %}
+        <h1>{{Categorie.nom}}</h1>
+        <h1>{{Categorie.id}}</h1>
+{% for sc in Categorie.sousCategorie %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 m-3 text-center">
-            <a href="/produit/{{ sousCategorie.id}}">
-                <img class="" src="/images/{{ sousCategorie.image }}">
-                    {{ sousCategorie.nom }}
+            <a href="/produit/{{ sc.id}}">
+                <img class="" src="/images/{{ sc.image }}">
+                    {{ sc.nom }}
                 </img>
             </a>
         </div>

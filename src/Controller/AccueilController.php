@@ -27,5 +27,13 @@ class AccueilController extends AbstractController
             'produits' => $produitRepository->findAll()
         ]);
     }
+
+    #[Route('/trololo', name: 'app_trololo')]
+    public function trololo(): Response
+    {
+        return $this->render('accueil/trololo.html.twig', [
+            
+        ]);
+    }
 }
 

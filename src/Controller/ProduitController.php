@@ -69,18 +69,20 @@ class ProduitController extends AbstractController
 
 
 
-        #[Route('/detail_produit/{id}', name: 'app_detail_guitares_electriques')]
-    public function detail(Produit $Produit,SousCategorie $SousCategorie, ProduitRepository $produitRepository): Response
+        #[Route('/detail_produit/{produit}', name: 'app_detail_guitares_electriques')]
+    public function detail(Produit $produit): Response
     {
      
+        $SousCategorie = $produit->getSousCategorie();
+
         return $this->render('produit/detail.html.twig', [
-            'Produit' => $Produit,
+            'Produit' => $produit,
             "SousCategorie" => $SousCategorie,
             "chemin_de_fer" => [
                 ["name" => "Accueil", "link" => "/"],
                 ["name" => $SousCategorie->getCategorie()->getNom(), "link" => "/sous_categorie/".$SousCategorie->getCategorie()->getId()],
-                ["name" => $Produit->getSousCategorie()->getNom(), "link" => "/produit/".$Produit->getSousCategorie()->getId()],
-                ["name" => $Produit->getNom(), "link" => " "],
+                ["name" => $produit->getSousCategorie()->getNom(), "link" => "/produit/".$produit->getSousCategorie()->getId()],
+                ["name" => $produit->getNom(), "link" => " "],
             ]
         ]);
     }

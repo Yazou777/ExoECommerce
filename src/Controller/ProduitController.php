@@ -60,7 +60,7 @@ class ProduitController extends AbstractController
     return $this->render('produit/index.html.twig', [
         "SousCategorie" => $SousCategorie,
         "chemin_de_fer" => [
-            ["name" => "Accueil", "link" => "/"],
+            // ["name" => "Accueil", "link" => "/"],
             ["name" => $SousCategorie->getCategorie()->getNom(), "link" => "/sous_categorie/".$SousCategorie->getCategorie()->getId()],
             ["name" => $SousCategorie->getNom(), "link" => " "],
         ]
@@ -79,7 +79,7 @@ class ProduitController extends AbstractController
             'Produit' => $produit,
             "SousCategorie" => $SousCategorie,
             "chemin_de_fer" => [
-                ["name" => "Accueil", "link" => "/"],
+                // ["name" => "Accueil", "link" => "/"],
                 ["name" => $SousCategorie->getCategorie()->getNom(), "link" => "/sous_categorie/".$SousCategorie->getCategorie()->getId()],
                 ["name" => $produit->getSousCategorie()->getNom(), "link" => "/produit/".$produit->getSousCategorie()->getId()],
                 ["name" => $produit->getNom(), "link" => " "],

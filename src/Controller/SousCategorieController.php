@@ -40,7 +40,7 @@ class SousCategorieController extends AbstractController
         return $this->render('sous_categorie/index.html.twig', [
             "Categorie" => $Categorie,
             "chemin_de_fer" => [
-            [ "name" => "Accueil", "link" => "/"],
+            // [ "name" => "Accueil", "link" => "/"],
             [ "name" => $Categorie->getNom(),"link" => ""],
            ]
          ]);

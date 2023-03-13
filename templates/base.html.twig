@@ -177,7 +177,12 @@
         {% block body %}{% endblock %}
         
     </body>
-
+{# <h1>{{test}}</h1> #}
+ {% for des in test %}
+ <ul>
+<li>{{des}}</li> 
+</ul>
+  {% endfor %}
 
     <footer>
         <div class="container-fuid">

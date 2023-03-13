@@ -56,9 +56,12 @@ class ProduitController extends AbstractController
     #[Route('/produit/{SousCategorie}', name: 'app_guitares_electriques')]
     public function index(SousCategorie $SousCategorie,ProduitRepository $produitRepository, SousCategorieRepository $sousCategorieRepository): Response
     {
+        $descri = "sa mére,la pute,salut";
+        $test = list($li1, $li2, $li3) = explode(",", $descri);
 
     return $this->render('produit/index.html.twig', [
         "SousCategorie" => $SousCategorie,
+        "test" => $test,
         "chemin_de_fer" => [
             // ["name" => "Accueil", "link" => "/"],
             ["name" => $SousCategorie->getCategorie()->getNom(), "link" => "/sous_categorie/".$SousCategorie->getCategorie()->getId()],

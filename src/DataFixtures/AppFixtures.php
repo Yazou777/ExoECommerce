@@ -38,13 +38,7 @@ class AppFixtures extends Fixture
         $produit1->setNom("Harley Benton TE-52 NA Vintage Series");
         $produit1->setImage("HarleyTE-52.webp");
         $produit1->setPrix(158);
-        $produit1->setDescription("
-        <ul class='ps-3'>
-        <li >Série Vintage</li>
-        <li >Corps en frêne américain</li>
-        <li >Manche Vintage visé en érable canadien caramélisé avec bande en Roseacer</li>
-      </ul>
-      ");
+        $produit1->setDescription("Série Vintage:Corps en frêne américain:Manche Vintage visé en érable canadien caramélisé avec bande en Roseacer");
         $manager->persist($produit1);
         $sousCategorie1->addProduit($produit1);
 

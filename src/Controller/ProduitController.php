@@ -58,13 +58,14 @@ class ProduitController extends AbstractController
     {
         $descri = "sa mére,la pute,salut";
         $test = list($li1, $li2, $li3) = explode(",", $descri);
+
+
        $descriptions = $produitRepository->findBy([
         "sousCategorie" => $SousCategorie->getId()
        ]);
-    //    dd($descriptions);
+    
     //    $description = $produitRepository->find($SousCategorie->getId());
-  
-        
+
             
     return $this->render('produit/index.html.twig', [
         'descriptions' => $descriptions,
@@ -85,6 +86,7 @@ class ProduitController extends AbstractController
     {
      
         $SousCategorie = $produit->getSousCategorie();
+       
         $description = explode(":", $produit-> getDescription());
         //  dd($description);
         return $this->render('produit/detail.html.twig', [

@@ -15,6 +15,7 @@ class PanierController extends AbstractController
     {
         $panier = $session->get("panier", []);
 
+
         return $this->render('panier/index.html.twig', [
             'panier' => $panier,
         ]);

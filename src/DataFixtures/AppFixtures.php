@@ -46,6 +46,7 @@ class AppFixtures extends Fixture
         $produit1->setNom("Larry Carlton S7FM TBL 2nd Gen");
         $produit1->setImage("Larry.webp");
         $produit1->setPrix(589);
+        $produit1->setDescription("Corps en aulne:Table en érable flammé:Manche vissé en érable torréfié");
         $manager->persist($produit1);
         $sousCategorie1->addProduit($produit1);
 

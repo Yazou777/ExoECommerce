@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Produit;
+use App\Repository\ProduitRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -18,6 +19,10 @@ class PanierController extends AbstractController
 
         return $this->render('panier/index.html.twig', [
             'panier' => $panier,
+            "chemin_de_fer" => [
+            
+                
+               ]
         ]);
     }
 

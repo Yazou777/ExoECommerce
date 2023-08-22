@@ -32,7 +32,7 @@ class SousCategorieController extends AbstractController
     //      ]);
     // }
 
-       #[Route('/sous_categorie/{Categorie}', name: 'app_guitares_basses')]
+       #[Route('/sous_categorie/{nom}', name: 'app_guitares_basses')]
     public function index(Categorie $Categorie,CategorieRepository $categorieRepository,SousCategorieRepository $sousCategorieRepository): Response
     {
 
